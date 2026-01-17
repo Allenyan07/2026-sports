@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <!-- iOS 全屏支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="FitTrack Pro" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#10b981" />
+    
+    <title>FitTrack Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #f8fafc;
+        -webkit-tap-highlight-color: transparent;
+        overflow-x: hidden;
+        color: #1e293b;
+      }
+      .safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+      /* 细腻的渐变背景 */
+      .bg-soft-gradient {
+        background: radial-gradient(circle at top right, #f1f5f9 0%, #f8fafc 100%);
+      }
+      /* 优化触感反馈 */
+      .btn-active:active {
+        transform: scale(0.96);
+        transition: transform 0.1s ease-out;
+      }
+      /* 侧滑项专用样式 */
+      .swipe-container {
+        touch-action: pan-y;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+        "recharts": "https://esm.sh/recharts@^3.6.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.45.1"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-soft-gradient">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
